@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <EditText
+        android:id="@+id/detailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tableLayout"
+        android:background="@null"
+        android:gravity="start"
+        android:paddingLeft="8dp"
+        android:paddingTop="24dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"></EditText>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <RelativeLayout
+                android:id="@+id/shareLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/favoriteLayout">
+
+                <ImageView
+                    android:id="@+id/shareImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:background="?android:selectableItemBackground"
+                    android:paddingBottom="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_share"></ImageView>
+
+                <TextView
+                    android:id="@+id/shareText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shareImage"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="8dp"
+                    android:text="Share"></TextView>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/favoriteLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/deleteLayout">
+
+                <ImageView
+                    android:id="@+id/favImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:background="?android:selectableItemBackground"
+                    android:paddingBottom="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_star"></ImageView>
+
+                <TextView
+                    android:id="@+id/favText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/favImage"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="8dp"
+                    android:text="Favorite"></TextView>
+
+            </RelativeLayout>
+            <RelativeLayout
+            android:id="@+id/deleteLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/deleteImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="8dp"
+                android:background="?android:selectableItemBackground"
+                android:paddingBottom="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_delete"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/deleteImage"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="8dp"
+                android:text="Delete"></TextView>
+
+        </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/saveLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/saveImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:background="?android:selectableItemBackground"
+                    android:paddingBottom="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_save"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/saveImage"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="8dp"
+                    android:text="Save"></TextView>
+
+            </RelativeLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

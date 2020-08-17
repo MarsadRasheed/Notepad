@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ToDoDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/toDoRelativeLayout"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></RadioButton>
+
+        <EditText
+            android:id="@+id/toDoEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/radioButton"
+            android:layout_margin="8dp"
+            android:layout_centerVertical="true"
+            android:text="Hello this is example to-Do"
+            android:background="@null"
+            ></EditText>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toDoRelativeLayout"
+        android:background="?android:attr/listDivider" />
+
+    <RelativeLayout
+        android:id="@+id/remainderRL"
+        android:layout_margin="8dp"
+        android:layout_below="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/notiImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_notifications"
+            android:layout_margin="12dp"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/notifiyText"
+            android:layout_toRightOf="@+id/notiImage"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Add remainder"
+            android:textColor="@color/your_Selected"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:background="@null"
+            android:inputType="none"
+            ></TextView>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/remainderRL"
+        android:background="?android:attr/listDivider" />
+
+    <RelativeLayout
+        android:id="@+id/importantRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_below="@id/divider2">
+
+        <ImageView
+            android:id="@+id/priImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_priority"
+            android:layout_margin="12dp"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/priText"
+            android:layout_toRightOf="@+id/priImage"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Mark as important"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000000"
+            ></TextView>
+
+        <Switch
+            android:id="@+id/importantSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/importantRL"
+        android:background="?android:attr/listDivider" />
+
+    <RelativeLayout
+        android:id="@+id/remarksRL"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider3">
+
+        <ImageView
+            android:id="@+id/remarksImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_text_short"
+            android:layout_margin="12dp"
+            ></ImageView>
+
+        <EditText
+            android:id="@+id/remarksTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/remarksImage"
+            android:layout_margin="8dp"
+            android:layout_centerVertical="true"
+            android:hint="Remarks"
+            android:background="@null"></EditText>
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayoutToDo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:stretchColumns="*"
+        android:background="#FFFFFF">
+
+        <TableRow>
+
+            <RelativeLayout
+                android:id="@+id/shareLayoutToDo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/shareImageToDo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:background="?android:selectableItemBackground"
+                    android:paddingBottom="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_share"></ImageView>
+
+                <TextView
+                    android:id="@+id/shareTextToDo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shareImageToDo"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="8dp"
+                    android:text="Share"></TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/deleteLayoutToDo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/deleteImageToDo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:background="?android:selectableItemBackground"
+                    android:paddingBottom="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_delete"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/deleteImageToDo"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="8dp"
+                    android:text="Delete"></TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/saveLayoutToDo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/saveImageToDo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:background="?android:selectableItemBackground"
+                    android:paddingBottom="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_save"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/saveImageToDo"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="8dp"
+                    android:text="Save"></TextView>
+
+            </RelativeLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

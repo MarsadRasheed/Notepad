@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/todo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="To-do"
+                android:padding="16dp"
+                android:background="?android:selectableItemBackground">
+            </EditText>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/todo">
+
+                <ImageButton
+                    android:id="@+id/notificationImage"
+                    android:src="@drawable/ic_notifications"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:selectableItemBackground"
+                    ></ImageButton>
+
+                <ImageButton
+                    android:id="@+id/priorityImage"
+                    android:src="@drawable/ic_priority"
+                    android:layout_toRightOf="@+id/notificationImage"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:selectableItemBackground"
+                    ></ImageButton>
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="save"
+                    android:background="?android:selectableItemBackground"
+                    android:textColor="@color/your_Selected"
+                    ></Button>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
