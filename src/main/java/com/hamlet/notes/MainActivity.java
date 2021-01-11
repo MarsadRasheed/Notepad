@@ -95,11 +95,15 @@ public class MainActivity extends AppCompatActivity {
                             if (priorityButtonClicked) {
                                 b = databaseHelper.addToDo(editText.getText().toString(), HIGH_PRIORITY,dateTime);
                                 createNotificationChennel(editText.getText().toString(),1);
-                                settingAlarm(dateTime,editText.getText().toString(),1);
+                                if(dateTime != null{
+                                    settingAlarm(dateTime,editText.getText().toString(),1);
+                                }
                             } else {
                                 b = databaseHelper.addToDo(editText.getText().toString(), LOW_PRIORITY,dateTime);
                                 createNotificationChennel(editText.getText().toString(),0);
-                                settingAlarm(dateTime,editText.getText().toString(),0);
+                                if(dateTime != null{
+                                    settingAlarm(dateTime,editText.getText().toString(),0);
+                                }
                             }
 
                             if (b) {
